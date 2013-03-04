@@ -11,9 +11,14 @@
 	<script src='counter.jquery.js' type='text/javascript'></script>
 	<script type="text/javascript" charset="utf-8">
 		$(function(){
-			$('textarea[data-max-length]').counter();
+			$('textarea[data-max-length]').counter({'limitExceedClass':'limit'});
 		})
 	</script>
+	<style>
+      .limit{
+      	color:red;
+      }
+	</style>
 </head>
 <body>
 	
@@ -25,12 +30,12 @@
 	<form>
 		<div>
 			<div class='counter_label'></div>
-			<textarea data-max-length="200">type here</textarea>
+			<textarea data-max-length="20">type here</textarea>
 		</div>
 		
 		<div>
 			<div class='counter_label'></div>
-			<textarea data-max-length="200">type here</textarea>
+			<textarea data-max-length="20">type here</textarea>
 		</div>		
 	</form>
 </body>
